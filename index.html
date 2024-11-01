@@ -1,94 +1,553 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 
-    <!--icon bootstrap -->
+  <!--icon bootstrap -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <!-- font -->
- <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <title>bd-shope</title> 
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <title>bd-shope</title>
 </head>
+
 <body>
 
 
-    <!--navigation-manu start-->
-    <header >
-          <a href="#" class="logo img-fluid"><img src="logo/BDSHOP.png" alt=""></a> 
-          <ul class="navbar">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#" class="">About-us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact-me</a></li>
+
+  <!--navigation-manu start-->
+  <nav class="navbar transition navbar-expand-lg fixed-top bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#"><img src="logo/BDSHOP.png" class="img-fluid nav-logo" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
           </ul>
-          <div class="icon"> 
-          <div class="search-box">
-            
-              <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-              <span class="search-icon" onclick="performSearch()">🔍</span>
-            
+          <form class="d-flex justify-content-center" role="search">
+            <input class="form-control me-2 h" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+
+          <div class="nav-btn-div d-flex justify-content-between ">
+            <button class=" nav-btn  nav-btn1">log-in</button>
+            <button class=" nav-btn  nav-btn2"><i class="fa-solid fa-cart-shopping"></i>Registation</button>
+
           </div>
-               
-            <a href="#"class=user> <i class="fa fa-user-circle-o"></i>Sing-In</a>
-            <a href="#">Ragister</a>
-            <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
-          </div>
-      
-          <!--navigation-manu end-->
-    </header>
 
-    
-  <div>
-  <section id="cover" class=" cover " >
-    <div class="container cover-container">
-    <div class="row  ">
-
-      <div class="col-md-6 hero-text">
-
-        <div class="p-3 text">
-          <h1 class="custom-heighlight">NEW ARRIVEL</h1>
-           <h1 class="custom-heighlight2"> NEVER STOP RUNNING</h1>
-          <h3>Get up 30% of</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Atque dicta nobis aspernatur.</p>
-            <div class="btn-div">
-              <button class="btn-landing btn1">SHOP NOW</button>
-              <button class="btn-landing btn4"><i class="fa-solid fa-cart-shopping"></i>BUY NOW</button>
-              
-            </div>
         </div>
       </div>
-
-      <div class="col-md-6 hero-image img-fluid d-flex align-items-end">
-          <img src="image/png.webp" alt="" class="  ">
-      </div>
     </div>
+  </nav>
+
+  <section id="cover" class=" cover transition">
+    <div class="container cover-container">
+      <div class="row  d-flex  ">
+
+        <div class="col-md-6 hero-text">
+
+          <div class="p-3 text">
+            <h1 class="custom-heighlight">NEW ARRIVEL</h1>
+            <h1 class="custom-heighlight2"> NEVER STOP RUNNING</h1>
+            <h3>Get up 30% of</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Atque dicta nobis aspernatur.</p>
+            <div class="btn-div">
+              <button class="btn-landing btn1   ">SHOP NOW</button>
+              <button class="btn-landing btn4 "><i class="fa-solid fa-cart-shopping"></i>BUY NOW</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 hero-image img-fluid ">
+          <img src="image/png.webp" alt="" class="  ">
+        </div>
+      </div>
     </div>
   </section>
 
- 
+
+
+  <main class="container transition" id=>
+
+    <section id="services" class="mt-3">
+      <h3 class="d-flex justify-content-center my-4">Services</h3>
+      <div class="row g-2">
+
+        <div class="col-md-6 d-flex flex-column order-1">
+
+          <div class="card custom-services-card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <img src="logo/image 12.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="cardbody p-2">
+                  <h5 class="custom-card-title">Find the Perfect Fit</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card custom-services-card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <img src="logo/image 13.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="cardbody p-2">
+                  <h5 class="custom-card-title">Free Exchaing</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card custom-services-card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4  d-flex align-items-center justify-content-center">
+                <img src="logo/image 14.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="cardbody p-2">
+                  <h5 class=" custom-card-title">Contact Our Seller</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center align-items-center services-img order-lg-2">
+          <img src="logo/XMLID 2.png" alt="" class="mx-auto d-block w-100">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!--  PRODUCTS START -->
+  <section>
+    <div class="container transition">
+      <h2 class="mt-4 card-container-title2 d-flex justify-content-center">PRODUCTS</h2>
+      <div class="row  ">
+        <div class="col-md-6 col-lg-4 ">
+          <div class="container mt-5 d-flex align-items-center justify-content-center ">
+            <div class="card product-card custom-card border-0">
+              <div class="position-relative">
+                <img src="product-image/headphones.jpg" class="card-img-top" alt="Product Image">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title ">Product Title</h5>
+                <p class="card-text">This is a brief description of the product. It highlights the main features and
+                  benefits.</p>
+
+                <!-- Final row for price and Add to Cart button -->
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold">$49.99</span>
+                  <a href="#" class="btn btn-primary custom-card-btn">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="container mt-5 d-flex align-items-center justify-content-center ">
+            <div class="card product-card custom-card  border-0 ">
+              <div class="position-relative custom-card-img">
+                <img src="product-image/watch.jpg" class="card-img-top" alt="Product Image">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text">This is a brief description of the product. It highlights the main features and
+                  benefits.</p>
+
+                <!-- Final row for price and Add to Cart button -->
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold">$49.99</span>
+                  <a href="#" class="btn btn-primary custom-card-btn">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="container mt-5 d-flex align-items-center justify-content-center ">
+            <div class="card product-card custom-card border-0 ">
+              <div class="position-relative">
+                <img src="product-image/pot.jpg" class="card-img-top" alt="Product Image">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Product Title</h5>
+                <p class="card-text">This is a brief description of the product. It highlights the main features and
+                  benefits.</p>
+
+                <!-- Final row for price and Add to Cart button -->
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="text-success fw-bold">$49.99</span>
+                  <a href="#" class="btn btn-primary custom-card-btn">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--  PRODUCTS END -->
+
+  <!-- Tranding product  product start -->
+  <section class="container transition">
+    <div>
+      <h2 class="card-container-title2 mt-4 d-flex justify-content-center mt-5  ms-4 p-2">TRANDING PRODUCTS</h2>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="box-area  d-flex align-items-center justify-content-center  container">
+          <div class="box mt-5">
+            <img src="product-image/yheadphones.jpg" alt="headphone"class="img-fluid" style="height:100%">
+            <div class="overlay">
+              <h3>Headphone</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Itaque quae similique praesentium omnis, incidunt voluptas.</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="box-area   d-flex align-items-center justify-content-center container">
+          <div class="box mt-5">
+            <img src="product-image/ymobail.jpg" alt="headphone"class="img-fluid" style="height:100%">
+            <div class="overlay">
+              <h3>Headphone</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Itaque quae similique praesentium omnis, incidunt voluptas.</p>
+              <a href="#"class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="box-area   d-flex align-items-center justify-content-center container">
+          <div class="box mt-5">
+            <img src="product-image/camera.jpg" alt="headphone"class="img-fluid" style="height:100%">
+            <div class="overlay">
+              <h3>Headphone</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Itaque quae similique praesentium omnis, incidunt voluptas.</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Tranding product  product end -->
+<!-- of canvas start -->
+  <section class="container mt-4 mb-5 transition">
+    <p class="card-container-title2 mt-4 d-flex justify-content-center mt-5  ms-4 p-2 h2">know Me More</p>
+    <div class="row mt-4">
+      <div class="col-md-7 me-auto">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Our sercives
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Our Ruls
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Our details
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
 
 
+        <button class=" custom-btn2 w-100 mt-3" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          Button with data-bs-target
+        </button>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae commodi
+              voluptates tempora quod! Pariatur magni tempore molestiae dolorum numquam ab dolorem quam? Exercitationem
+              distinctio vitae nostrum mollitia quis numquam! In real life you can have the elements you have chosen.
+              Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown  mt-3 ">
+              <button class=" dropdown-toggle   custom-btn2 w-100" type="button" data-bs-toggle="dropdown">
+                Download more Details
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Home</a></li>
+                <li><a class="dropdown-item" href="#">Products</a></li>
+                <li><a class="dropdown-item" href="#">Something else </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-4  ">
+        <img src="image/05(2).jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+  </section>
+<!-- of canvas start  end-->
+
+
+
+
+
+
+ <!-- top-seeling product start -->
+
+<section class="container transition">
+  <div>
+    <h2 class="card-container-title2 mt-4 d-flex justify-content-center mt-5  ms-4 p-2">TOP SELLING PRODUCTS</h2>
+  </div>
+  <div class="row ">
+
+    <div class="col-md-4 ">
+      <div class="box-area2  d-flex align-items-center justify-content-center  container">
+        <div class="box2 mt-5">
+          <img src="product-image/yheadphones.jpg" alt="headphone"class="img-fluid" style="height:100%">
+          <div class="overlay2">
+            <h3>Headphone</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Itaque quae similique praesentium omnis, incidunt voluptas.</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 transition">
     
+     <div class="container d-flex justify-content-center alig-items-center mt-3">
+          <div class="card product-card3 flex-md-row flex-column sell-card border-0">
+            <div class="card-img-left d-flex justify-content-center alig-items-center top-seeling-img">
+              <img src="product-image/pot.jpg" alt="Product Image">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="">Product Title</h5>
+                <p class="">Brief details about the product go here.</p>
+              </div>
+              <div class="d-flex alig-items-center justify-content-between">
+                <p class=""><strong >$99.99</strong></p>
+                <a href="#" class="btn btn-primary custom-btn">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-flex justify-content-center alig-items-center mt-3">
+          <div class="card product-card3 flex-md-row flex-column sell-card border-0">
+            <div class="card-img-left d-flex justify-content-center alig-items-center top-seeling-img " >
+              <img src="product-image/pot.jpg" alt="Product Image">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="">Product Title</h5>
+                <p class="">Brief details about the product go here.</p>
+              </div>
+              <div class="d-flex alig-items-center justify-content-between">
+                <p class=""><strong >$99.99</strong></p>
+                <a href="#" class="btn btn-primary custom-btn">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-flex justify-content-center alig-items-center mt-3">
+          <div class="card product-card3 flex-md-row flex-column sell-card border-0">
+            <div class="card-img-left d-flex justify-content-center alig-items-center top-seeling-img" >
+              <img src="product-image/pot.jpg" alt="Product Image">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="">Product Title</h5>
+                <p class="">Brief details about the product go here.</p>
+              </div>
+              <div class="d-flex alig-items-center justify-content-between">
+                <p class=""><strong >$99.99</strong></p>
+                <a href="#" class="btn btn-primary custom-btn">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+     </div> 
+        
 
-    <!--js-link-->
-    <script type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-    
+     
+    </div>
+  </div>
+</section>
+
+
+ <!-- top-seeling product end -->
+  <section class="container transition">
+    <h3 class="card-container-title2 mt-4 d-flex justify-content-center mt-5  ms-4 p-2 h2">BD SHOP</h3>
+    <hr class="bg-danger " style="height:2px;">
+    <div class="row ancor">
+      <div class="col-md-3">
+        <h5>About us</h5>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam.
+      </div>
+      <div class="col-md-3">
+        <h5>Feature</h5>
+        <div>
+          <a href="">About us</a>
+        </div>
+        <div>
+          <a href="">Best Products</a>
+        </div>
+        <div>
+          <a href="">Trems &condition </a>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <h5>Genarel Links</h5>
+        <div>
+          <a href="">Blog</a>
+        </div>
+        <div>
+          <a href="">Traking Order</a>
+        </div>
+        <div>
+          <a href="">Become Seller </a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <h5>Helful</h5>
+        <div>
+          <a href="">Hlash Sale</a>
+        </div>
+        <div>
+          <a href="">FAQ</a>
+        </div>
+        <div>
+          <a href="">Support</a>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-danger " style="height:2px;">
+
+  </section>
+  <section>
+    <div class="text-center my-3">
+      <P>Copy Right||2024</P>
+    </div>
+  </section>
+
+
+  <!--js-link-->
+  <script type="text/javascript" src="script.js"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
