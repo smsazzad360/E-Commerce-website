@@ -6,8 +6,8 @@
  
 :root{
     --bg-color:white;
-    --btn-color:#35da0c;
-    --yellow:#FF5E14;
+    --btn-color:#806CFF;
+    --yellow:#806CFF;
     --pink:#E40046;
     --background-color: #212428;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ img.nav-logo{
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.274);
 }
 .nav-btn{
-  border: 1px solid var(--btn-color);
+  border: 1px solid var(--yellow);
   background: none;
   padding: 7px 15px;
   font-size: 13px;
@@ -51,9 +51,11 @@ img.nav-logo{
  
   background-color: transparent;
   border-radius: 15px;
+  border:none;
+
 }
 .nav-btn1{
-  color: var(--btn-color);
+  color: var(--yellow);
 }
 .nav-btn2{
   color:white;
@@ -65,7 +67,7 @@ img.nav-logo{
   color: #fff;
 }
 .nav-btn2:hover{
-  color:var(--btn-color);
+  color:var(--yellow);
 }
 .nav-btn::before{
   content: "";
@@ -73,7 +75,7 @@ img.nav-logo{
   left: 0;
   width: 100%;
   height: 0%;
-  background: var(--btn-color);
+  background: var(--yellow);
   z-index: -1;
   transition: 0.8s;
 }
@@ -105,7 +107,7 @@ img.nav-logo{
    border-radius:15px ;
 }
 .custom-nav-a a:hover{
-  color:var(--btn-color);
+  color:var(--yellow);
   box-shadow: none;
 }
 .custom-nav-a a span{
@@ -116,7 +118,7 @@ img.nav-logo{
   height: 100%;
   transform:scale(0) translateY(50px);
   z-index:-1;
-  border-bottom :2px solid var(--btn-color); 
+  border-bottom :2px solid var(--yellow); 
   border-radius: 15px;
 }
 .custom-nav-a a:hover span{
@@ -124,18 +126,16 @@ img.nav-logo{
 }
 
 .custom-nav-a .custom-nav {
- border-bottom:2px solid var(--btn-color);
- color:var(--btn-color);
+
+ color:var(--yellow);
 }
-.custom-nav-a .custom-nav:hover{
- border-bottom:none;
- color:none;
-}
+
+
 
 
 /* landing section start */
 .custom-heighlight{
-    color:var(--yellow);
+    color:#FF5E14;
     font-size: 3.5rem;
     font-weight: 600;
     font-family:var(--poppins-font);  
@@ -269,10 +269,10 @@ font-size: 12px;
   .icon a i{
     margin-right:10px;
     font-size: 25px;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.322);;
+
     padding:5px;
     border-radius: 50%;
-    color:rgb(88, 88, 88);
+    color:rgb(175, 196, 206);;
     transition:all .5s ;
     transition: transform .5s;
   }
@@ -448,12 +448,14 @@ width:100px;
   text-decoration: none;
   margin-top:4px;
   border:none;
-  border-bottom: 2px solid var(--btn-color);
+  border-bottom: 2px solid var(--yellow);
   box-shadow: var(--box-shadow);
   border-radius: 10px;;
 }
 .dropdown .custom-menu{
    border:none;
+   background-color: transparent;
+   color:var(--yellow);
 }
 
 
@@ -473,8 +475,15 @@ width:100px;
   color:white;
 }
 /* ofcanvas end */
-
-
+/* brand */
+.brand-row img{
+  box-shadow: var(--box-shadow);
+  padding:20px 0px;
+  transition:transform .5s;
+}
+.brand-row img:hover{
+ transform: scale(1.1);
+}
 
 
 
